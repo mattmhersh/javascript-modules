@@ -1,15 +1,1 @@
-var app = angular.module('app', []);
-
-angular.module('app').controller('GithubCtrl', function ($scope, GithubSvc) {
-        //test
-        GithubSvc.fetchStories().success(function (users) {
-            $scope.users = users
-        })
-});
-angular.module('app').factory('GithubSvc', function ($http) {
-        return {
-            fetchStories: function () {
-                return $http.get('https://api.github.com/users')
-            }
-        }
-});
+var app=angular.module("app",[]);angular.module("app").controller("GithubCtrl",["$scope","GithubSvc",function(t,u){u.fetchStories().success(function(u){t.users=u})}]),angular.module("app").factory("GithubSvc",["$http",function(t){return{fetchStories:function(){return t.get("https://api.github.com/users")}}}]);
