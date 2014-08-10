@@ -16,3 +16,7 @@
 # Maven
 log/
 target/
+
+# Node
+*.json
+node_modules/
